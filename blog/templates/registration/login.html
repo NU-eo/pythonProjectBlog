@@ -1,0 +1,10 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+    <h1 class="text-center">Вход</h1>
+    <form method="post" class="other-forms">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <button type="submit" class="btn btn-primary my-2">Войти</button>
+    <p>Дон'т хав аккаунт? <br/> Не беда - <a href="{% url 'signup' %}">Зарегистрироваться</a></p>
+    </form>
+{% endblock %}
